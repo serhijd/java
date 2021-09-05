@@ -1,5 +1,9 @@
 package org.example;
 
+import org.example.controller.Controller;
+import org.example.model.Model;
+import org.example.view.View;
+
 /**
  * Hello world!
  *

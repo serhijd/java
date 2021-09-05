@@ -1,4 +1,7 @@
-package org.example;
+package org.example.controller;
+
+import org.example.model.Model;
+import org.example.view.View;
 
 import java.util.Scanner;
 
