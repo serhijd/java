@@ -1,4 +1,4 @@
-/**
+/*
  * Homework 04
  * Sergiy Dolnyy
  */
