@@ -1,6 +1,7 @@
-/**
+/*
  * Homework 04
  * Sergiy Dolnyy
+ * new start
  */
 package org.example;
 public class App 
