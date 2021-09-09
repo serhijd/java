@@ -22,7 +22,6 @@ public final class ImmutableStudent {
     public ImmutableStudent setName(String name){
         return new ImmutableStudent(name,this.age);
     }
-
     public ImmutableStudent setAge(Age age){
         return new ImmutableStudent(this.name, age);
     }
