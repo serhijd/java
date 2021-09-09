@@ -16,9 +16,12 @@ public class Main
         age.setYear(2000);
 
         ImmutableStudent student = new ImmutableStudent("Alex",age);
-        System.out.println("Alex year = "+student.getAge().getYear());
+        System.out.println(""+student.getName()+" year = "+student.getAge().getYear());
         student.getAge().setYear(2001);
-        System.out.println("Alex year = "+student.getAge().getYear());
+        System.out.println(""+student.getName()+" year = "+student.getAge().getYear());
+        student = student.setName("Dmitriy");
+        System.out.println(""+student.getName()+" year = "+student.getAge().getYear());
+
 
 /*        ImmutableStudent is01;
         is01 = immutableStudent.setName("Dima");
