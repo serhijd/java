@@ -1,9 +1,3 @@
-/*
- * Homework 01
- * Sergiy Dolnyy
- * MVC pattern
- * Model must receive validated and correct data
- */
 
 package HomeWork01;
 

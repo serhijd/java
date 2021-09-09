@@ -7,14 +7,13 @@
 
 package org.example;
 
-/**
- * Hello world!
- *
- */
+
 public class Main
 {
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+    public static void main( String[] args ) {
+        ImmutableStudent immutableStudent = new ImmutableStudent("Ivan",new Age());
+        immutableStudent.setName("Dima");
+
+        System.out.println( immutableStudent.getName() );
     }
 }
