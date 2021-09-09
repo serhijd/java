@@ -12,12 +12,12 @@ public final class ImmutableStudent {
     public String getName(){return name;}
     public Age getAge(){return age;}
 
-    public void setName(String name){
-        this.name = name;
+    public ImmutableStudent setName(String name){
+        return new ImmutableStudent(name,this.age);
     }
 
-    public void setAge(Age age){
-        this.age = age;
+    public ImmutableStudent setAge(Age age){
+        return new ImmutableStudent(this.name, age);
     }
 
 }
