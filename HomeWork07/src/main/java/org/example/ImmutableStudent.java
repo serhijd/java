@@ -6,11 +6,18 @@ public final class ImmutableStudent {
 
     public ImmutableStudent(String name, Age age) {
         this.name = name;
-        this.age = age;
+        Age cloneAge = new Age();
+        cloneAge.setYear(age.getYear());
+        this.age = cloneAge;
     }
 
     public String getName(){return name;}
-    public Age getAge(){return age;}
+
+    public Age getAge(){
+        Age cloneAge = new Age();
+        cloneAge.setYear(this.age.getYear());
+        return cloneAge;
+    }
 
     public ImmutableStudent setName(String name){
         return new ImmutableStudent(name,this.age);

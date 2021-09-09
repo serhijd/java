@@ -17,7 +17,7 @@ public class Main
 
         ImmutableStudent student = new ImmutableStudent("Alex",age);
         System.out.println("Alex year = "+student.getAge().getYear());
-        age.setYear(2001);
+        student.getAge().setYear(2001);
         System.out.println("Alex year = "+student.getAge().getYear());
 
 /*        ImmutableStudent is01;
