@@ -1,8 +1,8 @@
 /*
  * Homework 07
  * Sergiy Dolnyy
- * MVC pattern
  * Create immutable object
+ * override equals() and hashCode()
  */
 
 package org.example;
