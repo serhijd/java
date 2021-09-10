@@ -43,6 +43,9 @@ public final class ImmutableStudent {
         if (obj == null || obj.getClass() != this.getClass()){
             return false;
         }
+        if (hashCode()!=obj.hashCode()){
+            return false;
+        }
         ImmutableStudent student = (ImmutableStudent) obj;
         return (name != null && name.equals(student.getName())) &&
             (group != null && group.equals(student.getGroup())) &&

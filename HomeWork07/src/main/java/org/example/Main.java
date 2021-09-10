@@ -113,6 +113,8 @@ public class Main
             System.out.println("Student is not equals to Student 3");
         }
         System.out.println(student.hashCode()==student03.hashCode());
+        System.out.println(student.equals(null));
+        System.out.println(student.equals(student));
 
     }
 }
