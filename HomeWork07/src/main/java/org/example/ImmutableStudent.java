@@ -42,10 +42,9 @@ public final class ImmutableStudent {
             return false;
         }
         ImmutableStudent student = (ImmutableStudent) obj;
-        return (name != null && name.equals(student.getName()));
-        /*                (group != null && group.equals(student.getGroup())) &&
-                (age != null && student.getAge() != null && age.getYear()==student.getAge().getYear());
-                */
+        return (name != null && name.equals(student.getName())) &&
+            (group != null && group.equals(student.getGroup())) &&
+            (age != null && age.getYear()==student.getAge().getYear());
     }
 }
 
