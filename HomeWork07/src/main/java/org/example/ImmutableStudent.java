@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Objects;
+
 public final class ImmutableStudent {
     private final String name;
     private final String group;
@@ -45,6 +47,24 @@ public final class ImmutableStudent {
         return (name != null && name.equals(student.getName())) &&
             (group != null && group.equals(student.getGroup())) &&
             (age != null && age.getYear()==student.getAge().getYear());
+//        return Objects.equals(name,student.name) &&
+//                Objects.equals(group,student.group) &&
+//                Objects.equals(age,student.age);
+    }
+
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(name, group, age);
+//    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((name == null) ? 0 : name.hashCode());
+        result = prime * result + ((group == null) ? 0: group.hashCode());
+        result = prime * result + ((age == null) ? 0: age.hashCode());
+        return result;
     }
 }
 
