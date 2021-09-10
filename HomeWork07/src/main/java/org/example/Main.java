@@ -68,13 +68,14 @@ public class Main
         }else{
             System.out.println("Student is not equals to Student 1");
         }
+
         System.out.println("=============== EqualTo student 02 =======================");
         //ImmutableStudent student02 = null;
-        //age.setYear(1993);
+        age.setYear(1993);
         ImmutableStudent student02;
         student02 = new ImmutableStudent("Alex", "217", age);
-        //student02 = student.setName("Alex");
-        //student02 = student.setGroup("217");
+        student02 = student.setName("Alex");
+        student02 = student.setGroup("217");
 
         student02.getAge().setYear(2000); //it is immutable
         System.out.println("Student   "+student.getName()
@@ -90,9 +91,11 @@ public class Main
         }else{
             System.out.println("Student is not equals to Student 2");
         }
+
         System.out.println("=============== EqualTo student 03 =======================");
-        age.setYear(2000);
+        //age.setYear(2000);
         ImmutableStudent student03 = new ImmutableStudent("Alex", "217", age);
+        student03 = student03.setName("Bob");
         System.out.println("Student   "+student.getName()
                 +" group = "+student.getGroup()
                 +" year = "+student.getAge().getYear());
