@@ -10,3 +10,8 @@
 2. Создать immutable object
     (обязательно должна присутствовать ссылка на mutable часть).
     Научиться писать его в электронном блокноте безошибочно.
+
+    Note:
+    It appears as the presentation was build around this article
+    https://dzone.com/articles/how-to-create-an-immutable-class-in-java
+    with simplification of the Age class to contain only a year instead of all date attributes.

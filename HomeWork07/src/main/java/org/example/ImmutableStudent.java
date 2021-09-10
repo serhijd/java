@@ -33,5 +33,19 @@ public final class ImmutableStudent {
         return new ImmutableStudent(this.name, this.group, age);
     }
 
+    @Override
+    public boolean equals (Object obj){
+        if (obj == this){
+            return true;
+        }
+        if (obj == null || obj.getClass() != this.getClass()){
+            return false;
+        }
+        ImmutableStudent student = (ImmutableStudent) obj;
+        return (name != null && name.equals(student.getName()));
+        /*                (group != null && group.equals(student.getGroup())) &&
+                (age != null && student.getAge() != null && age.getYear()==student.getAge().getYear());
+                */
+    }
 }
 
