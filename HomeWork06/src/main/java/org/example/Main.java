@@ -92,7 +92,11 @@ public class Main
         }else{
             System.out.println("Student is not equals to Student 2");
         }
-        System.out.println(student.hashCode()==student02.hashCode());
+
+        System.out.println("Hash code comparison " + Boolean.toString(student.hashCode()==student02.hashCode()));
+        System.out.println("x=y "+student.equals(student02));
+        System.out.println("y=x "+student02.equals(student));
+
 
         System.out.println("=============== EqualTo student 03 =======================");
 //        age.setYear(2000);
@@ -112,9 +116,11 @@ public class Main
         }else{
             System.out.println("Student is not equals to Student 3");
         }
-        System.out.println(student.hashCode()==student03.hashCode());
-        System.out.println(student.equals(null));
-        System.out.println(student.equals(student));
+        System.out.println("HashCode comparison " + Boolean.toString(student.hashCode()==student03.hashCode()));
+        System.out.println("x=null " + student.equals(null));
+        System.out.println("x=x " + student.equals(student));
+        System.out.println("x=y " + student.equals(student03));
+        System.out.println("y=x " + student03.equals(student));
 
     }
 }
