@@ -3,6 +3,7 @@
  * Sergiy Dolnyy
  * Create immutable object
  * override equals() and hashCode()
+ *
  */
 
 package org.example;
