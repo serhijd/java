@@ -1,9 +1,7 @@
 package org.example;
 
 import org.junit.Test;
-
 import static org.junit.Assert.*;
-
 
 public class ImmutableStudentTest {
     @Test
@@ -18,7 +16,6 @@ public class ImmutableStudentTest {
 
         assertTrue("x=x",student.equals(student));
     }
-
     @Test
     public void testSymmeteric(){
         //if objA equels objB, objB must equals objA
@@ -32,7 +29,6 @@ public class ImmutableStudentTest {
         assertTrue("x=y and y=x",student.equals(student01)
             && student01.equals(student));
     }
-
     @Test
     public void testConsistent(){
         //multiple runs of equals must return the same value
@@ -48,7 +44,6 @@ public class ImmutableStudentTest {
         }
         assertTrue("x consistency",test);
     }
-
     @Test
     public void testNull(){
         Age age = new Age();
@@ -58,7 +53,6 @@ public class ImmutableStudentTest {
 
         assertFalse("x=null",student.equals(null));
     }
-
     @Test
     public void testNotEquals(){
         Age age = new Age();
