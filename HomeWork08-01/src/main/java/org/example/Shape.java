@@ -1,5 +1,7 @@
 package org.example;
 
+import java.text.DecimalFormat;
+
 public abstract class Shape {
     public abstract double square();
     public abstract double perimeter();
@@ -7,6 +9,7 @@ public abstract class Shape {
 
     @Override
     public String toString(){
-        return "perimeter = "+perimeter()+", square = "+square();
+        DecimalFormat df = new DecimalFormat("#.##");
+        return ", perimeter = "+df.format(perimeter())+", square = "+df.format(square());
     }
 }
