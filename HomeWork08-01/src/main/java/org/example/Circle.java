@@ -44,8 +44,8 @@ public class Circle extends Shape{
     @Override
     public String toString(){
         DecimalFormat df = new DecimalFormat("#.##");
-        return "Circle center = " + center.toString()
-                + ", radius = " + df.format(this.radius)
+        return "Circle [" + center
+                + ", R = " + df.format(this.radius) + "]"
                 + super.toString();
 //                + ", square = " + df.format(square())
 //                + ", perimeter = " + df.format(perimeter());

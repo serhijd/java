@@ -10,6 +10,7 @@ public class Rectangle extends Shape{
         this.topLeft = topLeft;
         this.bottomRight = bottomRight;
     }
+
     public Rectangle (double x1, double y1, double x2, double y2){
         this.topLeft = new Point(x1,y1);
         this.bottomRight = new Point(x2,y2);
@@ -33,22 +34,37 @@ public class Rectangle extends Shape{
 
     @Override
     public void move(double dx, double dy) {
-        System.out.print("Rectangle moves from "+topLeft+" "+bottomRight);
-        topLeft.setX(topLeft.getX()+dx);
-        topLeft.setY(topLeft.getY()+dy);
-        bottomRight.setX(bottomRight.getX()+dx);
-        bottomRight.setY(bottomRight.getY()+dy);
-        System.out.println(" to"+topLeft+bottomRight);
+        System.out.print("Rectangle moves from "
+                + topLeft + " " + bottomRight);
+        topLeft.setX(topLeft.getX() + dx);
+        topLeft.setY(topLeft.getY() + dy);
+        bottomRight.setX(bottomRight.getX() + dx);
+        bottomRight.setY(bottomRight.getY() + dy);
+        System.out.println(" to" + topLeft + bottomRight);
     }
 
     @Override
     public String toString(){
         DecimalFormat df = new DecimalFormat("#.##");
-        return "Rectangle top left = " + topLeft
-                +", bottom right = " + bottomRight
+        return "Rectangle [" + topLeft + ", " + bottomRight + "]"
                 + super.toString();
 //                +", square = " + df.format(square())
 //                +", perimeter = " + df.format(perimeter());
     }
 
+    public Point getTopLeft() {
+        return topLeft;
+    }
+
+    public void setTopLeft(Point topLeft) {
+        this.topLeft = topLeft;
+    }
+
+    public Point getBottomRight() {
+        return bottomRight;
+    }
+
+    public void setBottomRight(Point bottomRight) {
+        this.bottomRight = bottomRight;
+    }
 }

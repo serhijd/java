@@ -27,5 +27,14 @@ public class Main
         System.out.println(rect);
         rect.move(3,2);
         System.out.println(rect);
+
+        System.out.println();
+
+        Shape triangle = new Triangle(1,8,2,1,8,9);
+//        Shape triangle = new Triangle(1,8,2,1,5,5);
+        System.out.println(triangle);
+        triangle.move(5,2);
+        System.out.println(triangle);
+
     }
 }
