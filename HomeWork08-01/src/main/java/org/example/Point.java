@@ -1,5 +1,7 @@
 package org.example;
 
+import java.text.DecimalFormat;
+
 public class Point {
     private double x;
     private double y;
@@ -29,6 +31,7 @@ public class Point {
 
     @Override
     public String toString(){
-        return "Point [x,y] = "+x+y;
+        DecimalFormat df = new DecimalFormat("#.##");
+        return "Point ["+df.format(x)+","+df.format(y)+"]";
     }
 }
