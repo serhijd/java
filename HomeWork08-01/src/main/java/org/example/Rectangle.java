@@ -34,13 +34,13 @@ public class Rectangle extends Shape{
 
     @Override
     public void move(double dx, double dy) {
-        System.out.print("Rectangle moves from "
-                + topLeft + " " + bottomRight);
+        System.out.print("Rectangle moves from ["
+                + topLeft + ", " + bottomRight + "]");
         topLeft.setX(topLeft.getX() + dx);
         topLeft.setY(topLeft.getY() + dy);
         bottomRight.setX(bottomRight.getX() + dx);
         bottomRight.setY(bottomRight.getY() + dy);
-        System.out.println(" to" + topLeft + bottomRight);
+        System.out.println(" to [" + topLeft + bottomRight + "]");
     }
 
     @Override
