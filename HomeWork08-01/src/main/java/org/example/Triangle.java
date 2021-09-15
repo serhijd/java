@@ -47,23 +47,22 @@ public class Triangle extends Shape{
 
     @Override
     public void move(double dx, double dy) {
-        System.out.print("Triangle moves from "
-                + pointA + " " + pointB + " " + pointC);
+        System.out.print("Triangle moves from ["
+                + pointA + ", " + pointB + ", " + pointC + "]");
         pointA.setX(pointA.getX()+dx);
         pointA.setY(pointA.getY()+dy);
         pointB.setX(pointB.getX()+dx);
         pointB.setY(pointB.getY()+dy);
         pointC.setX(pointC.getX()+dx);
         pointC.setY(pointC.getY()+dy);
-        System.out.println(" to" + pointA + " "
-                + pointB + " " + pointC);
+        System.out.println(" to [" + pointA + ", "
+                + pointB + ", " + pointC + "]");
     }
 
     @Override
     public String toString() {
-        return "Triangle [" + pointA
-                + pointB + pointC + "]"
-                + super.toString();
+        return "Triangle [" + pointA + ", " + pointB + ", "
+                + pointC + "]" + super.toString();
     }
 
     public Point getPointA() {

@@ -10,7 +10,7 @@ public class Main
 {
     public static void main( String[] args ) {
         System.out.println( "HomeWork 08-01" );
-
+        System.out.println();
         Point point = new Point(3,4);
         System.out.println(point);
 
