@@ -23,5 +23,8 @@ public class Main
                 LocalDate.of(2030,5,20),
                 "AA 12345678");
         System.out.println(license);
+
+        Driver driver = new Driver(person,license);
+        System.out.println(driver);
     }
 }
