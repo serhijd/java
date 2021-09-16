@@ -2,13 +2,28 @@ package org.example;
 
 import java.time.LocalDate;
 
-public  class Driver {
+public class Driver implements CarDriver{
     private PersonDriver person;
     private DriverLicense license;
 
     public Driver(PersonDriver person, DriverLicense license) {
         this.person = person;
         this.license = license;
+    }
+
+    @Override
+    public String firstName() {
+        return this.person.firstName();
+    }
+
+    @Override
+    public String lastName() {
+        return this.person.lastName();
+    }
+
+    @Override
+    public DrivingLicense.VehicleType category() {
+        return this.license.category();
     }
 
     public PersonDriver getPerson() {
@@ -29,9 +44,9 @@ public  class Driver {
 
     @Override
     public String toString() {
-        return "Driver{" +
-                "person=" + person +
-                ", license=" + license +
-                '}';
+        return "Driver{"
+                + "person=" + person + ", "
+                + "license=" + license + "}";
     }
+
 }

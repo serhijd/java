@@ -2,7 +2,7 @@ package org.example;
 
 import java.time.LocalDate;
 
-public class DrivingLicense implements DriverLicense{
+public class DrivingLicense implements DriverLicense, CarType{
     private PersonLicense person;
     private VehicleType category;
     private LocalDate issued;
@@ -24,6 +24,11 @@ public class DrivingLicense implements DriverLicense{
     }
 
     @Override
+    public VehicleType category() {
+        return category;
+    }
+
+    @Override
     public String licenseNumber() {
         return licenseNumber;
     }
@@ -37,6 +42,7 @@ public class DrivingLicense implements DriverLicense{
     public LocalDate expires() {
         return expires;
     }
+
     public PersonLicense getPerson() {
         return person;
     }

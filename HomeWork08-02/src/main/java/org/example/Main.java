@@ -26,5 +26,11 @@ public class Main
 
         Driver driver = new Driver(person,license);
         System.out.println(driver);
+        System.out.println();
+        Battery battery = new Battery(640,"Silver","VARTA");
+        System.out.println(battery);
+        System.out.println();
+        Car car = new Car(driver,battery);
+        System.out.println(car);
     }
 }
