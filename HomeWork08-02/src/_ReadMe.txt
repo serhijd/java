@@ -19,3 +19,5 @@ Material/Code samples/OOP samples/12_IntefacesWork
 водитель - категория лицензии
 
 Под запрос данних строим интерфейсы
+
+https://www.bmvi.de/SharedDocs/EN/Articles/StV/driving-licence-categories-overview.html

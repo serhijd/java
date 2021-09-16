@@ -7,5 +7,5 @@ public class Driver {
     private String lastName;
     private LocalDate birthday;
     private int age;
-    private DrivingLicense drivingLicense;
+    private DriverLicense drivingLicense;
 }
