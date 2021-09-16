@@ -37,7 +37,7 @@ public class Car {
     public String toString() {
         return "Car{" +
                 "driver=" + driver +
-                ",\n carBattery=" + carBattery +
+                ", carBattery=" + carBattery +
                 '}';
     }
 }
