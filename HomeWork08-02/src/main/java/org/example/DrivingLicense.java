@@ -2,39 +2,89 @@ package org.example;
 
 import java.time.LocalDate;
 
-public class DrivingLicense implements PersonLicense{
+public class DrivingLicense implements DriverLicense{
     private PersonLicense person;
     private VehicleType category;
     private LocalDate issued;
     private LocalDate expires;
-    private String number;
+    private String licenseNumber;
 
     public enum VehicleType {A, B, C, D, E}
 
-    public DrivingLicense(PersonLicense person, VehicleType category, LocalDate issued, LocalDate expires, String number) {
+    public DrivingLicense(PersonLicense person,
+                          VehicleType category,
+                          LocalDate issued,
+                          LocalDate expires,
+                          String licenseNumber) {
         this.person = person;
         this.category = category;
         this.issued = issued;
         this.expires = expires;
-        this.number = number;
+        this.licenseNumber = licenseNumber;
     }
-    // FIXME
+
     @Override
-    public String firstName() {
-        return null;
+    public String licenseNumber() {
+        return licenseNumber;
     }
 
-    // FIXME
     @Override
-    public String lastName() {
-        return null;
+    public LocalDate issued() {
+        return issued;
     }
 
-    // FIXME
     @Override
-    public LocalDate birthday() {
-        return null;
+    public LocalDate expires() {
+        return expires;
+    }
+    public PersonLicense getPerson() {
+        return person;
     }
 
+    public void setPerson(PersonLicense person) {
+        this.person = person;
+    }
 
+    public VehicleType getCategory() {
+        return category;
+    }
+
+    public void setCategory(VehicleType category) {
+        this.category = category;
+    }
+
+    public LocalDate getIssued() {
+        return issued;
+    }
+
+    public void setIssued(LocalDate issued) {
+        this.issued = issued;
+    }
+
+    public LocalDate getExpires() {
+        return expires;
+    }
+
+    public void setExpires(LocalDate expires) {
+        this.expires = expires;
+    }
+
+    public String getLicenseNumber() {
+        return licenseNumber;
+    }
+
+    public void setLicenseNumber(String licenseNumber) {
+        this.licenseNumber = licenseNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "DrivingLicense{" +
+                "person=" + person +
+                ", category=" + category +
+                ", issued=" + issued +
+                ", expires=" + expires +
+                ", licenseNumber='" + licenseNumber + '\'' +
+                '}';
+    }
 }

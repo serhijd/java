@@ -6,6 +6,4 @@ public interface DriverLicense {
     String licenseNumber();
     LocalDate issued();
     LocalDate expires();
-    Person.Gender gender();
-
 }

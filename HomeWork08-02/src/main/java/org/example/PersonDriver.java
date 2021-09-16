@@ -6,5 +6,5 @@ public interface PersonDriver {
     String firstName();
     String lastName();
     LocalDate birthday();
-    Person.Gender Gender();
+    Person.Gender gender();
 }

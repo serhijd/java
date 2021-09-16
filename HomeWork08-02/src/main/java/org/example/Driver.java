@@ -1,8 +1,8 @@
 package org.example;
 
 import java.time.LocalDate;
-
-public class Driver {
+//todo remove abstract
+public abstract class Driver implements PersonDriver,DriverLicense{
     private String firstName;
     private String lastName;
     private LocalDate birthday;

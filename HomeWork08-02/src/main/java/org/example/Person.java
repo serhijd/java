@@ -2,13 +2,13 @@ package org.example;
 
 import java.time.LocalDate;
 
-public class Person implements PersonDriver{
+public class Person implements PersonDriver, PersonLicense{
     private String firstName;
     private String lastName;
     private LocalDate birthday;
     private int age;
 
-    public enum Gender{MALE, FEMALE};
+    public enum Gender{MALE, FEMALE}
     private Gender gender;
 
     public Person() {
@@ -37,7 +37,7 @@ public class Person implements PersonDriver{
     }
 
     @Override
-    public Gender Gender() {
+    public Gender gender() {
         return gender;
     }
 
