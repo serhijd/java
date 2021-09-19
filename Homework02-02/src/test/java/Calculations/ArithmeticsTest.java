@@ -48,5 +48,17 @@ public class ArithmeticsTest {
 //        Arithmetics a = new Arithmetics();
         result = a.div(21,3);
         assertEquals("Divide doubles failed",7.0,result,0.001);
+//        try {
+//            a.div(21,0);
+//            Assert.fail("Divide by 0");
+////          assertThrows("Divide by 0",Exception,);
+//        } catch (Exception e){
+//
+//        }
+    }
+    @Test(expected = ArithmeticException.class)
+    public void divException() {
+        a.div(21,0);
+        //Assert.fail("Divide by 0");
     }
 }
