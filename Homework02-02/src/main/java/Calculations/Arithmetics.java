@@ -1,5 +1,7 @@
 package Calculations;
 
+import org.junit.Test;
+
 public class Arithmetics {
     public double add (double a, double b){
         return a + b;

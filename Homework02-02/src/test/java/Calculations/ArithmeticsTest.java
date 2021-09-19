@@ -61,4 +61,12 @@ public class ArithmeticsTest {
         a.div(21,0);
         //Assert.fail("Divide by 0");
     }
+    @Test (timeout=10) //time in ms
+    public void testT(){
+        double result = 0;
+        for (int i = 0; i < 100000000; i++){
+            result = a.add(result,i);
+        }
+    }
+
 }
