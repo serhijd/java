@@ -1,12 +1,14 @@
 package Calculations;
 
 import org.junit.*;
-import org.junit.internal.runners.statements.ExpectException;
-import org.junit.rules.ExpectedException;
-
-import java.rmi.UnexpectedException;
-
 import static org.junit.Assert.*;
+import org.junit.internal.runners.statements.ExpectException;
+import java.rmi.UnexpectedException;
+import org.junit.rules.ExpectedException;
+import org.junit.rules.Timeout;
+import java.util.concurrent.TimeUnit;
+
+
 
 public class ArithmeticsTest {
     private static Arithmetics a;
@@ -23,6 +25,10 @@ public class ArithmeticsTest {
 
     @Rule
     public final ExpectedException expException = ExpectedException.none();
+
+    @Rule
+    //public final Timeout tOut = new Timeout(1000);
+    public final Timeout tOut = new Timeout(100L, TimeUnit.MILLISECONDS);
 
     @Test
     public void add() {
@@ -75,7 +81,8 @@ public class ArithmeticsTest {
         a.div(21,0);
     }
 
-    @Test (timeout=10) //time in ms
+//    @Test (timeout=10) //time in ms
+    @Test
     public void testTimeout(){
         double result = 0;
         for (int i = 0; i < 100000000; i++){
