@@ -2,6 +2,8 @@ package Calculations;
 
 import org.junit.*;
 import static org.junit.Assert.*;
+
+import org.junit.function.ThrowingRunnable;
 import org.junit.internal.runners.statements.ExpectException;
 import java.rmi.UnexpectedException;
 import org.junit.rules.ExpectedException;
@@ -23,7 +25,7 @@ public class ArithmeticsTest {
 //        // method to be called after each of test methods
 //    }
 
-    @Rule
+    @Rule //deprecated in JUnit 4.13
     public final ExpectedException expException = ExpectedException.none();
 
     @Rule
@@ -70,22 +72,23 @@ public class ArithmeticsTest {
 //        }
     }
 
-//    @Test(expected = ArithmeticException.class)
-//    public void divException() {
-//        a.div(21,0);
-//    }
-
-    @Test
+    @Test(expected = ArithmeticException.class)
     public void divException() {
+        a.div(21,0);
+    }
+
+    @Test   //deprecated in JUnit 4.13
+    public void divExceptionRule() {
         expException.expect(ArithmeticException.class);
         a.div(21,0);
     }
 
+    @Ignore
 //    @Test (timeout=10) //time in ms
     @Test
     public void testTimeout(){
         double result = 0;
-        for (int i = 0; i < 100000000; i++){
+        for (int i = 0; i < 1000000000; i++){
             result = a.add(result,i);
         }
     }
