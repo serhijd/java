@@ -1,6 +1,10 @@
 package Calculations;
 
 import org.junit.*;
+import org.junit.internal.runners.statements.ExpectException;
+import org.junit.rules.ExpectedException;
+
+import java.rmi.UnexpectedException;
 
 import static org.junit.Assert.*;
 
@@ -16,6 +20,9 @@ public class ArithmeticsTest {
 //    public static void done() {
 //        // method to be called after each of test methods
 //    }
+
+    @Rule
+    public final ExpectedException expException = ExpectedException.none();
 
     @Test
     public void add() {
@@ -56,13 +63,20 @@ public class ArithmeticsTest {
 //
 //        }
     }
-    @Test(expected = ArithmeticException.class)
+
+//    @Test(expected = ArithmeticException.class)
+//    public void divException() {
+//        a.div(21,0);
+//    }
+
+    @Test
     public void divException() {
+        expException.expect(ArithmeticException.class);
         a.div(21,0);
-        //Assert.fail("Divide by 0");
     }
+
     @Test (timeout=10) //time in ms
-    public void testT(){
+    public void testTimeout(){
         double result = 0;
         for (int i = 0; i < 100000000; i++){
             result = a.add(result,i);
